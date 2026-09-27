@@ -1,0 +1,9 @@
+{
+  "name": "smart-budget",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Budgeting and cash-flow forecasting utilities for recurring income and spending.",
+  "main": "src/index.js",
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=20" }
+}
