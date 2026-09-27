@@ -1,17 +1,28 @@
-# Smart Budget
+<div align="center">
 
-A small budgeting engine for monthly summaries, category spending, recurring bills and forward cash-flow forecasting.
+<img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=SMART%20BUDGET&fontAlignY=38&desc=CASHFLOW%20%E2%80%A2%20BILLS%20%E2%80%A2%20FORECASTS&descAlignY=58&color=0:050505,55:202020,100:5a1616&fontColor=f5f5f5&descColor=d4d4d4" width="100%" />
 
-I built it around the question I actually care about when looking at money: **what is safe to spend, what is coming out next, and where will the balance be in a few months if nothing changes?**
+![Finance](https://img.shields.io/badge/focus-personal%20finance-111111?style=for-the-badge)
+![Node](https://img.shields.io/badge/Node.js-20%2B-2b2b2b?style=for-the-badge&logo=nodedotjs)
+![Tests](https://img.shields.io/badge/tests-node:test-7a1f1f?style=for-the-badge)
 
-## Includes
+**A budgeting engine built around one practical question: what is actually safe to spend?**
+
+</div>
+
+---
+
+## Current logic
 
 - income / spending / net summary
 - savings-rate calculation
 - category breakdowns
 - budget warning states
 - recurring-bill lookahead
-- multi-month cash-flow forecast
+- multi-month cash-flow forecasts
+- automated tests
+
+## Example
 
 ```js
 import { forecastBalance, budgetStatus } from './src/index.js';
@@ -29,4 +40,18 @@ console.table(forecastBalance({
 console.log(budgetStatus(400, 337));
 ```
 
-Requires Node 20+. The engine has no runtime dependencies and is designed so a UI, CSV importer or bank integration can sit on top later.
+## Why I built it
+
+Most finance dashboards show what already happened. I wanted the core logic to answer what matters next: what is due, which category is drifting, and where the balance lands if nothing changes.
+
+## Test
+
+```bash
+npm test
+```
+
+The engine has no runtime dependencies and is designed so a UI, CSV importer or banking integration can sit on top later.
+
+---
+
+<div align="center"><sub>YukiShinobi // make the next balance visible before the money moves.</sub></div>
